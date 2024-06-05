@@ -1,6 +1,6 @@
 import { Container, Text, VStack, Heading, Box, Button, HStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { FaCalendarAlt, FaUsers, FaCog } from "react-icons/fa";
+import { FaCalendarAlt, FaUsers, FaCog, FaTicketAlt } from "react-icons/fa";
 
 const Index = () => {
   return (
@@ -14,6 +14,9 @@ const Index = () => {
           </Button>
           <Button leftIcon={<FaUsers />} colorScheme="teal" variant="solid" size="lg">
             Manage Attendees
+          </Button>
+          <Button as={Link} to="/book-ticket" leftIcon={<FaTicketAlt />} colorScheme="teal" variant="solid" size="lg">
+            Book Ticket
           </Button>
           <Button leftIcon={<FaCog />} colorScheme="teal" variant="solid" size="lg">
             Settings
