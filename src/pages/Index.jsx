@@ -1,4 +1,5 @@
 import { Container, Text, VStack, Heading, Box, Button, HStack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { FaCalendarAlt, FaUsers, FaCog } from "react-icons/fa";
 
 const Index = () => {
@@ -8,8 +9,8 @@ const Index = () => {
         <Heading as="h1" size="2xl" mb={4}>Event Management Platform</Heading>
         <Text fontSize="xl" textAlign="center">Manage your events efficiently and effortlessly.</Text>
         <HStack spacing={4}>
-          <Button leftIcon={<FaCalendarAlt />} colorScheme="teal" variant="solid" size="lg">
-            View Events
+          <Button as={Link} to="/create-event" leftIcon={<FaCalendarAlt />} colorScheme="teal" variant="solid" size="lg">
+            Create Event
           </Button>
           <Button leftIcon={<FaUsers />} colorScheme="teal" variant="solid" size="lg">
             Manage Attendees
